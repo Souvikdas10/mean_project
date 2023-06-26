@@ -1,0 +1,28 @@
+<!-- <p>add-user works!</p> -->
+<div class="container">
+    <h1>Add Item</h1>
+    <form [formGroup]="UserData" (ngSubmit)="submitData()">
+        <div class="mb-3">
+            <label for="exampleInputName1" class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="name" id="exampleInputEmail1"
+                aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputName1" class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
+                aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputName1" class="form-label">Phone</label>
+            <input type="text" class="form-control" formControlName="phone" id="exampleInputEmail1"
+                aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputName1" class="form-label">Salary</label>
+            <input type="text" class="form-control" formControlName="salary" id="exampleInputEmail1"
+                aria-describedby="emailHelp" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

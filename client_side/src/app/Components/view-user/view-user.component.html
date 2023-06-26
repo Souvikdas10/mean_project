@@ -1,0 +1,42 @@
+<p>view-user works!</p>
+<!-- <p>view-item works!</p> -->
+
+<!-- <div class="card">
+<ng-container *ngFor="let i of allItem">
+<p>Item Name:{{i.item_name}}</p>
+<p>company :{{i.company}}</p>
+<p>Item price:{{i.price}}</p>
+</ng-container>
+</div> -->
+
+
+<div class="container">
+    <table class="table table-dark">
+        <thead>
+            <tr class="table-primary">
+                <th class="table-secondary">Id</th>
+                <th class="table-info">Name</th>
+                <th class="table-warning">Email</th>
+                <th class="table-danger">Phone</th>
+                <th class="table-primary">Salary</th>
+                <th class="table-success" colspan="2">Action</th>
+            </tr>
+        </thead>
+        <ng-container *ngFor="let i of allUser">
+            <tbody>
+                <tr>
+                    <td class="table-info">***{{i._id.toString().slice(20,24)}}</td>
+                    <td class="table-secondary">{{i.name}}</td>
+                    <td class="table-danger">{{i.email}}</td>
+                    <td class="table-warning">{{i.phone}}</td>
+                    <td class="table-success">{{i.salary}}</td>
+                    <td class="table-primary">
+                        <a routerLink="/edit/{{i._id}}"><button class="btn btn-success">Update</button></a>
+                        &nbsp; &nbsp;
+                        <button class="btn btn-danger" (click)="dele(i._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </ng-container>
+    </table>
+</div>
